@@ -23,7 +23,7 @@ public class EmployeTest {
 	@Test
 	public void testAjouterEmployer() throws ParseException {
 
-		int e= es.ajouterEmploye(new Employe("HADIDI", "Mahmoud", "mahmoud@esprit.tn", true, Role.CHEF_DEPARTEMENT));
+		int e= es.ajouterEmploye(new Employe("Hadidi", "Mahmoud", "mahmoud@esprit.tn", true, Role.CHEF_DEPARTEMENT));
 		assertEquals("Mahmoud", es.getEmployePrenomById(e));
 		es.deleteEmployeById(e);
 	}
