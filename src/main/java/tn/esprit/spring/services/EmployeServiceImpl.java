@@ -44,7 +44,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	@Transactional	
-	public void affecterEmployeADepartement(int employeId, int depId) {
+	public List<Employe> affecterEmployeADepartement(int employeId, int depId) {
 		Departement depManagedEntity = deptRepoistory.findById(depId).get();
 		Employe employeManagedEntity = employeRepository.findById(employeId).get();
 
@@ -58,7 +58,7 @@ public class EmployeServiceImpl implements IEmployeService {
 			depManagedEntity.getEmployes().add(employeManagedEntity);
 
 		}
-
+		return (List<Employe>) employeRepository.findAll();
 	}
 	@Transactional
 	public void desaffecterEmployeDuDepartement(int employeId, int depId)

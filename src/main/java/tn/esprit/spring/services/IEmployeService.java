@@ -14,7 +14,7 @@ public interface IEmployeService {
 	
 	public int ajouterEmploye(Employe employe);
 	public void mettreAjourEmailByEmployeId(String email, int employeId);
-	public void affecterEmployeADepartement(int employeId, int depId);
+	public List<Employe> affecterEmployeADepartement(int employeId, int depId);
 	public void desaffecterEmployeDuDepartement(int employeId, int depId);
 	public Contrat ajouterContrat(Contrat contrat);
 	public void affecterContratAEmploye(int contratId, int employeId);
