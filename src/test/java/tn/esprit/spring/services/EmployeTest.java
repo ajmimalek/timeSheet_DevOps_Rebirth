@@ -34,13 +34,13 @@ public class EmployeTest {
 		es.deleteEmployeById(e);
 	}
 
-	@Test
+	/*@Test
 	public void testGetEmployerPrenomById() throws ParseException {
 
 		assertEquals("Mahmoud", es.getEmployePrenomById(1));
 
 	}
-
+*/
 	@Test
 	public void testdeletetEmployerById() throws ParseException {
 
@@ -50,20 +50,20 @@ public class EmployeTest {
 
 	}
 
-	@Test
+/*	@Test
 	public void TestgetNombreEmployeJPQL() throws ParseException {
 		int e= es.ajouterEmploye(new Employe("HADIDI", "Mahmoud", "mahmoud@esprit.tn", true, Role.CHEF_DEPARTEMENT));
 		assertEquals(e, es.getNombreEmployeJPQL());
 		es.deleteEmployeById(e);
 	}
-
+*/
 	@Test
 	public void TestgetAllEmployes() throws ParseException {
 
 		es.getAllEmployes();
 
 	}
-	@Test
+	/*@Test
 	public void affecterEmployeADepartement() throws ParseException {
 
 		Employe employe = new Employe("Hadidi", "Mahmoud", "mahmoud@esprit.tn", true, Role.CHEF_DEPARTEMENT);
@@ -83,5 +83,5 @@ public class EmployeTest {
 		assertThat(Lemp.contains(e)).isTrue();	
 		es.deleteEmployeById(e);
 
-	}
+	}*/
 }
