@@ -159,7 +159,9 @@ public class RestControlEmploye {
 	}
 
 	
-
+ // URL : http://localhost:8081/SpringMVC/servlet/getTimesheetsByMissionAndDate
+ 	@GetMapping(value = "/getTimesheetsByMissionAndDate")
+     @ResponseBody
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 		return iemployeservice.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
