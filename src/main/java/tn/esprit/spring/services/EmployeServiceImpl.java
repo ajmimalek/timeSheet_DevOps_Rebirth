@@ -3,6 +3,7 @@ package tn.esprit.spring.services;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -42,7 +43,6 @@ public class EmployeServiceImpl implements IEmployeService {
 		Employe employe = employeRepository.findById(employeId).get();
 		employe.setEmail(email);
 		employeRepository.save(employe);
-
 	}
 
 	@Transactional	
@@ -83,9 +83,12 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void affecterContratAEmploye(int contratId, int employeId) {
-		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
-		Employe employeManagedEntity = employeRepository.findById(employeId).get();
-
+		Optional<Contrat> contratOptional = contratRepoistory.findById(contratId);
+		Optional<Employe> employeOptional = employeRepository.findById(employeId);
+		
+		Contrat contratManagedEntity = contratOptional.orElse(new Contrat());
+		Employe employeManagedEntity = employeOptional.orElse(new Employe());
+		
 		contratManagedEntity.setEmploye(employeManagedEntity);
 		contratRepoistory.save(contratManagedEntity);
 		
@@ -110,8 +113,9 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void deleteContratById(int contratId) {
-		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
-		if (contratManagedEntity.equals(null)) {
+		Optional<Contrat> contratOptional = contratRepoistory.findById(contratId);
+		Contrat contratManagedEntity = contratOptional.orElse(new Contrat());
+		if (contratManagedEntity.getReference() == 0) {
 			l.error("Contract Not Found");
 		}
 		contratRepoistory.delete(contratManagedEntity);
