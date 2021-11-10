@@ -1,210 +1,35 @@
-2021-11-09 18:51:34.894  INFO 9104 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 9104 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 18:51:34.907  INFO 9104 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 18:51:38.565  INFO 9104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 18:51:38.840  INFO 9104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 242ms. Found 2 repository interfaces.
-2021-11-09 18:51:40.830  INFO 9104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b9ab56a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 18:51:42.249  INFO 9104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 18:51:42.808  INFO 9104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 18:51:43.054  INFO 9104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2021-11-10 14:48:53.931  INFO 14068 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 14068 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
+2021-11-10 14:48:53.942  INFO 14068 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
+2021-11-10 14:48:56.400  INFO 14068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-10 14:48:56.724  INFO 14068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 282ms. Found 2 repository interfaces.
+2021-11-10 14:48:58.187  INFO 14068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b9ab56a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-10 14:48:59.454  INFO 14068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-10 14:48:59.998  INFO 14068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-10 14:49:00.342  INFO 14068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2021-11-09 18:51:43.416  INFO 9104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 18:51:43.422  INFO 9104 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 18:51:44.144  INFO 9104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 18:51:45.586  INFO 9104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 18:51:49.485  INFO 9104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:51:50.672  INFO 9104 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 18:51:53.845  INFO 9104 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:51:54.439  WARN 9104 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 18:51:59.610  INFO 9104 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 26.269 seconds (JVM running for 30.992)
-2021-11-09 18:52:00.258  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.281  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.293  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.299  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.367  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 18:52:00.539 ERROR 9104 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 18:52:00.599  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.739  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:52:00.760  INFO 9104 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 18:52:00.776  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:52:00.776  INFO 9104 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 18:52:00.789  INFO 9104 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:52:01.099  INFO 9104 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:52:01.101  INFO 9104 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:52:01.475  INFO 9104 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 18:52:01.487  INFO 9104 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-09 18:55:52.933  INFO 11748 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 11748 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 18:55:52.936  INFO 11748 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 18:55:55.029  INFO 11748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 18:55:55.214  INFO 11748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167ms. Found 2 repository interfaces.
-2021-11-09 18:55:56.337  INFO 11748 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2171da7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 18:55:57.234  INFO 11748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 18:55:57.814  INFO 11748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 18:55:58.059  INFO 11748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-11-09 18:55:58.227  INFO 11748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 18:55:58.232  INFO 11748 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 18:55:58.569  INFO 11748 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 18:55:59.332  INFO 11748 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 18:56:01.615  INFO 11748 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:56:02.406  INFO 11748 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 18:56:04.295  INFO 11748 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:56:04.439  WARN 11748 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 18:56:05.285  INFO 11748 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 13.326 seconds (JVM running for 16.849)
-2021-11-09 18:56:05.554  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.561  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.570  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.588  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.629  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 18:56:05.728 ERROR 11748 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 18:56:05.762  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.865  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:56:05.882  INFO 11748 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 18:56:05.897  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:56:05.898  INFO 11748 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 18:56:05.911  INFO 11748 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:56:06.088  INFO 11748 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:56:06.100  INFO 11748 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:56:06.471  INFO 11748 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 18:56:06.479  INFO 11748 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-09 18:56:49.677  INFO 18244 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 18244 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 18:56:49.692  INFO 18244 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 18:56:52.377  INFO 18244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 18:56:52.648  INFO 18244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 240ms. Found 2 repository interfaces.
-2021-11-09 18:56:54.461  INFO 18244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2171da7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 18:56:55.800  INFO 18244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 18:56:56.425  INFO 18244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 18:56:56.638  INFO 18244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-11-09 18:56:56.876  INFO 18244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 18:56:56.885  INFO 18244 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 18:56:57.402  INFO 18244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 18:56:58.291  INFO 18244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 18:57:01.333  INFO 18244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:57:02.357  INFO 18244 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 18:57:05.042  INFO 18244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:57:05.251  WARN 18244 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 18:57:06.288  INFO 18244 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 18.045 seconds (JVM running for 22.242)
-2021-11-09 18:57:06.608  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:06.619  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:06.626  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:06.634  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:06.688  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 18:57:06.826 ERROR 18244 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 18:57:06.870  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:06.971  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:57:06.991  INFO 18244 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 18:57:07.023  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 18:57:07.023  INFO 18244 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 18:57:07.041  INFO 18244 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 18:57:07.458  INFO 18244 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 18:57:07.463  INFO 18244 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 18:57:07.768  INFO 18244 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 18:57:07.778  INFO 18244 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-09 19:08:18.386  INFO 16756 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 16756 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 19:08:18.389  INFO 16756 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 19:08:20.500  INFO 16756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 19:08:20.651  INFO 16756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128ms. Found 2 repository interfaces.
-2021-11-09 19:08:21.948  INFO 16756 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6362f3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 19:08:23.407  INFO 16756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 19:08:23.801  INFO 16756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 19:08:23.985  INFO 16756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-11-09 19:08:24.181  INFO 16756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 19:08:24.186  INFO 16756 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 19:08:24.627  INFO 16756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 19:08:25.685  INFO 16756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 19:08:28.563  INFO 16756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:08:29.429  INFO 16756 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 19:08:31.515  INFO 16756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:08:31.704  WARN 16756 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 19:08:32.855  INFO 16756 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 15.965 seconds (JVM running for 19.763)
-2021-11-09 19:08:33.236  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.245  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.255  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.263  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.309  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 19:08:33.401 ERROR 16756 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 19:08:33.444  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.587  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:08:33.609  INFO 16756 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 19:08:33.632  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:08:33.633  INFO 16756 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 19:08:33.653  INFO 16756 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:08:34.074  INFO 16756 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:08:34.088  INFO 16756 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:08:34.462  INFO 16756 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 19:08:34.480  INFO 16756 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-09 19:09:08.511  INFO 18068 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 18068 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 19:09:08.514  INFO 18068 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 19:09:11.041  INFO 18068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 19:09:11.204  INFO 18068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 2 repository interfaces.
-2021-11-09 19:09:12.672  INFO 18068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e9af7db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 19:09:13.631  INFO 18068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 19:09:14.214  INFO 18068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 19:09:14.417  INFO 18068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-11-09 19:09:14.563  INFO 18068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 19:09:14.569  INFO 18068 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 19:09:14.982  INFO 18068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 19:09:15.762  INFO 18068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 19:09:18.185  INFO 18068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:09:19.899  INFO 18068 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 19:09:22.997  INFO 18068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:09:23.185  WARN 18068 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 19:09:24.079  INFO 18068 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 16.657 seconds (JVM running for 20.209)
-2021-11-09 19:09:24.485  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.493  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.502  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.525  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.575  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 19:09:24.740 ERROR 18068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 19:09:24.779  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.927  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:09:24.952  INFO 18068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 19:09:24.974  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:09:24.974  INFO 18068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 19:09:24.991  INFO 18068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:09:25.212  INFO 18068 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:09:25.217  INFO 18068 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:09:25.542  INFO 18068 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 19:09:25.558  INFO 18068 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-09 19:11:15.162  INFO 2888 --- [main] t.e.s.services.ContratServiceImplTest    : Starting ContratServiceImplTest on DESKTOP-MUF6N3C with PID 2888 (started by Malek in C:\Users\Malek\Desktop\ESPRIT\5TWIN\TimesheetProject)
-2021-11-09 19:11:15.167  INFO 2888 --- [main] t.e.s.services.ContratServiceImplTest    : No active profile set, falling back to default profiles: default
-2021-11-09 19:11:17.485  INFO 2888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-09 19:11:17.668  INFO 2888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159ms. Found 2 repository interfaces.
-2021-11-09 19:11:18.861  INFO 2888 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$162cbdb9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-09 19:11:19.754  INFO 2888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 19:11:20.127  INFO 2888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 19:11:20.320  INFO 2888 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-11-09 19:11:20.502  INFO 2888 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-11-09 19:11:20.505  INFO 2888 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-11-09 19:11:20.825  INFO 2888 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-11-09 19:11:21.559  INFO 2888 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-09 19:11:23.875  INFO 2888 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:11:24.662  INFO 2888 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-11-09 19:11:26.610  INFO 2888 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:11:26.775  WARN 2888 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-09 19:11:27.626  INFO 2888 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 13.401 seconds (JVM running for 17.285)
-2021-11-09 19:11:28.165  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.191  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.205  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.227  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.307  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
-2021-11-09 19:11:28.426 ERROR 2888 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
-2021-11-09 19:11:28.487  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.660  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:11:28.690  INFO 2888 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
-2021-11-09 19:11:28.739  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
-2021-11-09 19:11:28.740  INFO 2888 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
-2021-11-09 19:11:28.774  INFO 2888 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
-2021-11-09 19:11:28.813  INFO 2888 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:11:28.816  INFO 2888 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-09 19:11:30.289  INFO 2888 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-09 19:11:30.300  INFO 2888 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-10 14:49:00.638  INFO 14068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-10 14:49:00.643  INFO 14068 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-10 14:49:01.159  INFO 14068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-10 14:49:02.176  INFO 14068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-10 14:49:04.906  INFO 14068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-10 14:49:06.022  INFO 14068 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-10 14:49:08.199  INFO 14068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-10 14:49:08.395  WARN 14068 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-10 14:49:09.466  INFO 14068 --- [main] t.e.s.services.ContratServiceImplTest    : Started ContratServiceImplTest in 16.688 seconds (JVM running for 21.07)
+2021-11-10 14:49:09.842  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:09.850  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:09.856  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:09.877  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:09.927  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : All Contracts deleted successfully
+2021-11-10 14:49:10.009 ERROR 14068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Failed : Deleting All Contract
+2021-11-10 14:49:10.057  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:10.180  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
+2021-11-10 14:49:10.203  INFO 14068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Deleting Contract
+2021-11-10 14:49:10.229  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract added successfully
+2021-11-10 14:49:10.230  INFO 14068 --- [main] t.e.s.services.ContratServiceImplTest    : Test Successful : Adding Contract
+2021-11-10 14:49:10.263  INFO 14068 --- [main] t.e.spring.services.EmployeServiceImpl   : Contract deleted successfully
+2021-11-10 14:49:10.492  INFO 14068 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-10 14:49:10.499  INFO 14068 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-10 14:49:10.860  INFO 14068 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-10 14:49:10.875  INFO 14068 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
