@@ -40,6 +40,15 @@ pipeline {
                 bat 'mvn clean package deploy:deploy-file -DgroupId=tn.esprit.spring -DartifactId=Timesheet -Dversion=1.2-SNAPSHOT -DgeneratePom=true -Dpackaging=war -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-snapshots/ -Dfile=target/Timesheet-1.2-SNAPSHOT.war';
                 echo "Visit http://localhost:8081/repository/maven-snapshots/ to see test result ";
             }
+             post {
+                failure {
+                mail bcc: '', body: '''Hello,
+
+We would like to tell that the build has failed!
+
+''', cc: '', from: '', replyTo: '', subject: 'Failed to build', to: 'ajmi.malek@esprit.tn'
+        }
+                }
         }
     }
 }
