@@ -20,6 +20,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	ContratRepository contratRepoistory;
 
 	public Contrat ajouterContrat(Contrat contrat) {
+		l.info("Let's add a Contract");
 		contratRepoistory.save(contrat);
 		l.info("Contract added successfully");
 		return contrat;
