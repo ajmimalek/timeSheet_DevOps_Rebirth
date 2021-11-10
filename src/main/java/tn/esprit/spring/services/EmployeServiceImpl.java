@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +24,7 @@ import tn.esprit.spring.repository.TimesheetRepository;
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
-
+	private static final Logger l = LogManager.getLogger(EmployeServiceImpl.class);
 	@Autowired
 	EmployeRepository employeRepository;
 	@Autowired
@@ -33,7 +35,9 @@ public class EmployeServiceImpl implements IEmployeService {
 	TimesheetRepository timesheetRepository;
 
 	public int ajouterEmploye(Employe employe) {
+		l.info("Let's add this employe");
 		employeRepository.save(employe);
+		l.info("employe added successfully");
 		return employe.getId();
 	}
 
@@ -121,11 +125,14 @@ public class EmployeServiceImpl implements IEmployeService {
 	public void deleteEmployeById(int employeId)
 	{
 		Optional<Employe> e = employeRepository.findById(employeId);
+		
 		Employe employe = new Employe();
 
 		if (e.isPresent()) {
 			employe = e.get();
 
+		}else {
+			l.error("employe Not Found");
 		}
 
 		//Desaffecter l'employe de tous les departements
@@ -136,6 +143,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		}
 
 		employeRepository.delete(employe);
+		l.info("employe deleted successfully");
 	}
 
 	public void deleteContratById(int contratId) {
