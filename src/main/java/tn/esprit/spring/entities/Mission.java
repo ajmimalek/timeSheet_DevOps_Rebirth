@@ -13,6 +13,11 @@ import javax.persistence.OneToMany;
 @Entity
 public class Mission implements Serializable {
 
+	public Mission(String name) {
+		super();
+		this.name = name;
+	}
+
 	private static final long serialVersionUID = -5369734855993305723L;
 
 	@Id
