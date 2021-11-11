@@ -4,51 +4,55 @@ pipeline {
     stages {
         stage('Getting Project from Git') {
             steps {
-                echo 'Project is downloading...';
-                git branch:'malek',url:'https://github.com/ajmimalek/timeSheet_DevOps_Rebirth.git'
+                echo 'Project is downloading...'
+                git branch:'malek', url:'https://github.com/ajmimalek/timeSheet_DevOps_Rebirth.git'
             }
         }
         stage('Building the project') {
-            steps{
-                echo "Let's build our project";
-                bat 'mvn clean install';
+            steps {
+                echo "Let's build our project"
+                bat 'mvn clean install'
             }
         }
-        stage('Unit Tests'){
-            steps{
-                echo "Let's take a look if our project is working or not";
-                bat 'mvn test';
+        stage('Unit Tests') {
+            steps {
+                echo "Let's take a look if our project is working or not"
+                bat 'mvn test'
             }
         }
-        stage('Preparing the Static Tests : Jacoco'){
-            steps{
-                echo "In order to prepare our static tests, let's configure code coverage (Jacocco)";
-                bat 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install';
-                bat 'mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install';
+        stage('Preparing the Static Tests : Jacoco') {
+            steps {
+                echo "In order to prepare our static tests, let's configure code coverage (Jacocco)"
+                bat 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
+                bat 'mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install'
             }
         }
-        stage('Static Tests : SonarQube'){
-            steps{
-                echo "Launching Static Tests...";
-                bat 'mvn sonar:sonar';
-                echo "Visit http://localhost:9000 to see test result ";
+        stage('Static Tests : SonarQube') {
+            steps {
+                echo 'Launching Static Tests...'
+                bat 'mvn sonar:sonar'
+                echo 'Visit http://localhost:9000 to see test result '
             }
         }
-        stage('Deploying Project : Nexus'){
-            steps{
-                echo "Our project is deploying on maven-snapshots...";
-                bat 'mvn clean package deploy:deploy-file -DgroupId=tn.esprit.spring -DartifactId=Timesheet -Dversion=1.2-SNAPSHOT -DgeneratePom=true -Dpackaging=war -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-snapshots/ -Dfile=target/Timesheet-1.2-SNAPSHOT.war';
-                echo "Visit http://localhost:8081/repository/maven-snapshots/ to see test result ";
+        stage('Deploying Project : Nexus') {
+            steps {
+                echo 'Our project is deploying on maven-snapshots...'
+                bat 'mvn clean package deploy:deploy-file -DgroupId=tn.esprit.spring -DartifactId=Timesheet -Dversion=1.2-SNAPSHOT -DgeneratePom=true -Dpackaging=war -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-snapshots/ -Dfile=target/Timesheet-1.2-SNAPSHOT.war'
+                echo 'Visit http://localhost:8081/repository/maven-snapshots/ to see test result '
             }
-             post {
+            post {
                 failure {
-                mail bcc: '', body: '''Hello,
-
-We would like to tell that the build has failed!
-
-''', cc: '', from: '', replyTo: '', subject: 'Failed to build', to: 'ajmi.malek@esprit.tn'
-        }
+                    mail bcc: '',
+                    body: '''Hello,
+                    We would like to inform you that the build has failed!
+                    ''',
+                    cc: '',
+                    from: '',
+                    replyTo: '',
+                    subject: 'Failed to build',
+                    to: 'ajmi.malek@esprit.tn'
                 }
+            }
         }
     }
 }
