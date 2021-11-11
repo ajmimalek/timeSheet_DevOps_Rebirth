@@ -123,9 +123,9 @@ pipeline {
  		stage('Deploy our image') {
  			steps {
  				script {
- 					docker.withRegistry( '', registryCredential ) {
+ 					/*docker.withRegistry( '', registryCredential ) {
  					dockerImage.push()
- 					}
+ 					}*/
  				}
  			}
  			post {
@@ -142,7 +142,7 @@ pipeline {
  		}
  		stage('Cleaning up') {
  			steps {
- 				sh "docker rmi $registry:$BUILD_NUMBER"
+ 				/*sh "docker rmi $registry:$BUILD_NUMBER"*/
  			}
  			post {
                 failure {
