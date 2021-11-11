@@ -1,4 +1,9 @@
 pipeline {
+    environment {
+ 	 registry = "ajmimalek/timesheet"
+ 	 registryCredential = 'dockerHub'
+ 	 dockerImage = ''
+ } 
     agent any
 
     stages {
@@ -43,16 +48,35 @@ pipeline {
             post {
                 failure {
                     mail bcc: '',
-                    body: '''Hello,
-                    We would like to inform you that the build has failed!
-                    ''',
+                    body: '''Hello, We would like to inform you that Nexus was not able to deploy project!''',
                     cc: '',
                     from: '',
                     replyTo: '',
-                    subject: 'Failed to build',
+                    subject: '[Deploying Project : Nexus] Failed to build',
                     to: 'ajmi.malek@esprit.tn'
                 }
             }
         }
     }
+    	stage('Building our image') {
+ 			steps {
+ 				script {
+ 					dockerImage = docker.build registry + ":$BUILD_NUMBER"
+ 				}
+ 			}
+ 		}
+ 		stage('Deploy our image') {
+ 			steps {
+ 				script {
+ 					docker.withRegistry( '', registryCredential ) {
+ 					dockerImage.push()
+ 					}
+ 				}
+ 			}
+ 		}
+ 		stage('Cleaning up') {
+ 			steps {
+ 				sh "docker rmi $registry:$BUILD_NUMBER"
+ 			}
+ 		}
 }
