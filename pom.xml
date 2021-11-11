@@ -59,6 +59,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>timesheet_devops</finalName>
 	</build>
 	<distributionManagement>
     <repository>
