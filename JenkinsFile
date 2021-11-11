@@ -1,6 +1,6 @@
 pipeline {
     environment {
- 	 registry = "ajmimalek/timesheetJenkins"
+ 	 registry = "ajmimalek/timesheetjenkins"
  	 registryCredential = 'dockerHub'
  	 dockerImage = ''
  } 
@@ -105,7 +105,7 @@ pipeline {
  			steps {
  				script {
  					echo 'Building our Docker Image ajmimalek/timesheetJenkins...'
-                	bat 'docker build -t ajmimalek/timesheetJenkins.'
+                	bat 'docker build -t ajmimalek/timesheetjenkins .'
  				}
  			}
  			post {
