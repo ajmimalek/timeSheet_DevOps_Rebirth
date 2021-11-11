@@ -1,6 +1,6 @@
 pipeline {
     environment {
- 	 registry = "ajmimalek/timesheet"
+ 	 registry = "ajmimalek/timesheetJenkins"
  	 registryCredential = 'dockerHub'
  	 dockerImage = ''
  } 
@@ -104,9 +104,21 @@ pipeline {
     	stage('Building our image') {
  			steps {
  				script {
- 					dockerImage = docker.build registry + ":$BUILD_NUMBER"
+ 					echo 'Building our Docker Image ajmimalek/timesheetJenkins...'
+                	bat 'docker build -t ajmimalek/timesheetJenkins.'
  				}
  			}
+ 			post {
+                failure {
+                    mail bcc: '',
+                    body: '''Hello, We would like to inform you that Your docker image failed to BUILD!''',
+                    cc: '',
+                    from: '',
+                    replyTo: '',
+                    subject: '[Building Docker Image] Failed to build',
+                    to: 'ajmi.malek@esprit.tn'
+                }
+            }
  		}
  		stage('Deploy our image') {
  			steps {
@@ -116,11 +128,33 @@ pipeline {
  					}
  				}
  			}
+ 			post {
+                failure {
+                    mail bcc: '',
+                    body: '''Hello, We would like to inform you that Your docker image failed to DEPLOY!''',
+                    cc: '',
+                    from: '',
+                    replyTo: '',
+                    subject: '[Deploying Docker Image] Failed to build',
+                    to: 'ajmi.malek@esprit.tn'
+                }
+            }
  		}
  		stage('Cleaning up') {
  			steps {
  				sh "docker rmi $registry:$BUILD_NUMBER"
  			}
+ 			post {
+                failure {
+                    mail bcc: '',
+                    body: '''Hello, We would like to inform you that Your docker image failed to CLEAN!''',
+                    cc: '',
+                    from: '',
+                    replyTo: '',
+                    subject: '[Cleaning Docker] Failed to build',
+                    to: 'ajmi.malek@esprit.tn'
+                }
+            }
  		}
 }
 }
